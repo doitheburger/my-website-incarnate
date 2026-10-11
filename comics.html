@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">* {cursor: url(https://doitheshroom.neocities.org/hand.gif), auto !important;}</style>
+    <link rel="shortcut icon" href="https://doitheshroom.neocities.org/joy.png"/>
+    <title>doi's comics</title>
+  <h1>doi's comics</h1> 
+  <font color="#FF0000">warning: some of these comics have cartoon blood and violence </font> <br>
+  <a href="https://doitheshroom.neocities.org/"> <img src="https://doitheshroom.neocities.org/arrow.png" alt="back"/> </a><br>
+  <br>
+  click these to look through my comics
+  <div class="pressable">
+  <img src="https://doitheshroom.neocities.org/revolver%20nose%20button.png" alt = "revolver nose" onclick="opencomic(1)">
+  <img src="https://doitheshroom.neocities.org/attackme.png" alt = "fight me!" onclick="opencomic(2)">
+  <img src="https://doitheshroom.neocities.org/bob%20the%20baseball.png" alt = "bob the baseball player" onclick="opencomic(3)">
+  <img src="https://doitheshroom.neocities.org/the%20plan.png" alt = "the plan" onclick="opencomic(4)">
+  <img src="https://doitheshroom.neocities.org/oatsbutton.png" alt = "oats?" onclick="opencomic(5)">
+  <img src="https://doitheshroom.neocities.org/carrotsbutton.png" alt = "carrots?" onclick="opencomic(6)">
+  <img src="https://doitheshroom.neocities.org/cosmic%20luxuries.png" alt = "cosmic luxuries" onclick="opencomic(7)">
+  </div>
+  <div class="boxed">
+    <img id="comic" src = "https://doitheshroom.neocities.org/no%20comic%20yet.png" alt = "the comic">
+  </div>
+  <br>
+  <br>
+      <style>
+        body {
+          background-image: url("https://doitheshroom.neocities.org/background.png");
+          background-attachment: fixed;
+          font-family: "Comic Sans MS", "Comic Sans", "Comic Sans";
+          text-align: center;
+        }
+        a:hover {
+          font-size: 18px; 
+        }
+        .pressable {
+          width: fit-content;
+          padding: 10px;
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-right: auto;
+          margin-left: auto;
+          border: 2px outset rgb(0, 0, 0);
+          background-image: url("https://doitheshroom.neocities.org/greenround.png");
+        }
+        .boxed {
+          border: 2px outset rgb(0, 0, 0);
+          background-image: url("https://doitheshroom.neocities.org/greenround.png");
+          margin-top: 50px;
+          margin-bottom: auto;
+          margin-right: auto;
+          margin-left: auto;
+          width: fit-content;
+          padding: 25px;
+          text-align: center;
+          margin: 48;
+        }
+      </style>
+      <script>
+        //0 = choose
+        //1 = revolver nose
+        //3 = fight me!
+        var curcomic = 0
+        function whatcomic() {
+          if (curcomic == 1) {
+            document.getElementById('comic').src = "https://doitheshroom.neocities.org/revolvernose-comic.png";
+          }
+          if (curcomic == 2) {
+            document.getElementById('comic').src = "https://doitheshroom.neocities.org/fightme.png";
+          }
+          if (curcomic == 3) {
+            document.getElementById('comic').src = "https://doitheshroom.neocities.org/bobbaseball.png"
+          }
+          if (curcomic == 4) {
+            document.getElementById('comic').src = "https://doitheshroom.neocities.org/theplan.png"
+          }
+          if (curcomic == 5) {
+            document.getElementById('comic').src = "https://doitheshroom.neocities.org/oats.png"
+          }
+          if (curcomic == 6) {
+            document.getElementById('comic').src = "https://doitheshroom.neocities.org/carrots.png"
+          }
+          if (curcomic == 7) {
+            document.getElementById('comic').src = "https://doitheshroom.neocities.org/coughitup.png"
+          }
+        }
+        function opencomic(openedcomic) {
+          curcomic = openedcomic
+          whatcomic()
+        }
+      </script>
+    <body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">* {cursor: url(https://doitheshroom.neocities.org/hand.gif), auto !important;}</style>
+    <link rel="shortcut icon" href="https://doitheshroom.neocities.org/joy.png"/>
+    <title>doi's devlog</title>
+  <h1>doi's devlog</h1> 
+    <a href="https://doitheshroom.neocities.org/"> <img src="https://doitheshroom.neocities.org/arrow.png" alt="back"/> </a><br>
+    <h1> DUNGEONEER (working title)</h1>
+    <div class="boxed">
+        <h2>7/16/2026 dungeoneerlog 1: baseline</h2>
+        ~procedural dungeon generation <br>
+        ~character controller + collision <br>
+        ~updating eyesight <br>
+        ~basic goblins that move in random directions <br><br>
+        <img src="https://doitheshroom.neocities.org/dungeoneerlog-1.png" alt="picture of the game" /> <br>
+        tell me what i should add next in <a href="https://doitheshroom.atabook.org/?page=1"> my guestbook </a>!
+    </div>
+
+    <div class="boxed">
+        <h2>7/22/2026 dungeoneerlog 2: map maker wip</h2>
+        so for the future for me to not have to make every structure or map ever in code <br>
+        (thats absolutely TERRIBLE) im in the middle of creating a map maker for dungeoneerlog <br>
+        this is how im planning to make it work: <br>
+        the user will be able to place down tiles in a grid with a cursor and when they're done <br>
+        they will be able to press a button to export code that you can copy and paste into the game with <br>
+        instructions on how to create the a tile at a time with info about the tile as well such as if its <br>
+        collidable, if it will hurt the player, etc.        
+        <br><br>
+        <img src="https://doitheshroom.neocities.org/dungeoneerlog-2.png" alt="picture of the game" /> <br>
+        tell me what i should add next in <a href="https://doitheshroom.atabook.org/?page=1"> my guestbook </a>!
+    </div>
+
+    <div class="boxed">
+        <h2>8/31/2026 dungeoneerlog 3: big update </h2>
+        okay to get this out of the way: i GAVE UP ON THE MAP MAKING THING. its useless basically since i already have a map generator, and i didn't <br>
+        get any farther than what you saw, anyway... i HAVE gotten sorta far in development since... uh... like a month ago. <br>
+        in the middle of making this update, something broke in my code and i couldnt figure it out for like 3 days <br>
+        so i just kinda took a "break" from it (a month long one) i started working on it again yesterday and i found out the issue like, IMMEDATELY. <br>
+        anyway, like i said, ive added quite alot. to start things off i actually like, made a (very) basic goal. probably shoulda started with that but who cares. <br>
+        the goal is to collect the little glaggles that you see around the map in the gif below, and a counter on top to show the amount. <br>
+        im guessing to make it sorta like pacman where you gotta collect all of them and then go to some sort of exit, in which you go to the next stage <br>
+        where the difficulty is slightly higher, maybe a shop every few stages. <br>
+        ive also added an item system where you can pick up items, use them, and even drop them. (this is what i struggled on) <br>
+        so far i only have 1 item, which is a spraypaint can, which can (believe it or not) spray paint. <br>
+        onto the critters you can find in the dungeon, i have replaced the goblins with <a href="https://glagglepedia.fandom.com/wiki/Giggler"> gigglers </a> <br> 
+        due to the fact that goblins are smarter than gigglers, and i dont want to code that. now i have added one more critter, a shroom, which is a mushroom that walks around. <br>
+        this critter was inspired by the mushrooms in yume nikki (great game) which just block the way for no reason other than to piss you off, and give you the feeling of no control <br>
+        because all you can do is wait for them to move out of the way. which i like very much. <br>
+        thats pretty much all i have added this devlog. but this is a really badly made thing i have here and i havent told you what this game with even play like so im gonna do that now <br>
+        then wrap it up with what im planning to add. <br>
+        so in this game its just gonna be a roguelike i guess where you collect as many gigglers as possible, go onto the next stage where its more dangerous. <br>
+        the game works turn based, where if you move then every critter takes a turn based on what their coded behavior is, so if you stand still then nothing happens. <br>
+        as for what im planning to add: <br>
+        actual danger, like a monster that tries to eat you and in extension, a health bar. <br>
+        also make it so when you collect all the gigglers then theres an actual way to get into the next level instead of just kinda staying like that. <br>
+        maybe some more items and critters in general. <br>
+        and to finish it off, making it so items actually spawn in the dungeon cause they dont really do that. anyway, thanks for reading this was a long one. 
+        <br><br>
+        <img src="https://doitheshroom.neocities.org/dungeoneerlog3.gif" alt="gif of the game" /> <br>
+        gif of whats goin on
+        <br><br>
+        <img src="https://doitheshroom.neocities.org/thisisntthatfunnywhydidyoudownloadthis.png" alt="stupid meme of the game i made out of depression." /> <br>
+        ive stooped so incredibly low, i made a low quality meme out of depression of my own game. <br> <br>
+        tell me what i should add next in <a href="https://doitheshroom.atabook.org/?page=1"> my guestbook </a>!
+    </div>
+
+    <div class="boxed">
+        <h2>9/2/2026 dungeoneerlog 4: i *dropped* my logic!</h2>
+        i made it so items spawn in rooms. thats cool. right?... <br>
+        and i also had an issue with dropping that you can probably see in the gif somewhere above me <br>
+        so whenever you dropped an item, and theres an item you've already dropped then the other item you've dropped teleported to the new one <br>
+        ex: you have 2 cans of spray paint, you drop spraypaint 1. you move to the side, and you drop spray paint 2. spray paint 1 then teleports to where you dropped spray paint 2 <br>
+        but if you have a rock and a can of spraypaint and you drop the rock, move, and then drop the rock, they would stay in the same place. <br>
+        after like a trillion hours of me trying to figure out what the problem was, i found it... <br>
+        the issue was that when the game started, it added a tool to one of your hands directly from the table full of the tools <br>
+        the issue here is that i thought when you did that, it created a clone of the tools into your hand, but instead it acted more like a path to the original <br>
+        so when you dropped that item it changed the position of the ORIGINAL item from the table to the player <br>
+        and since the other item is pulling from the same global item, it changes the position of the global value to the new item you dropped, also moving the other item <br>
+        so the way i fixed this is instead of you starting with items, it spawns clones of the pulled item which can all have their own individual variables. <br>
+        haaha! this took me like 5 hours to figure out. <br>
+        
+        <br><br>
+        <img src="https://doitheshroom.neocities.org/thisisntthatfunnywhydidyoudownloadthis.png" alt="stupid meme of the game i made out of depression." /> <br>
+        tell me what i should add next in <a href="https://doitheshroom.atabook.org/?page=1"> my guestbook </a>!
+    </div>
+
+    <div class="boxed">
+        <h2>9/9/2026 dungeoneerlog 5: attack on germs</h2>
+        hello hi guys whats up how are you guys doomin' <br>
+        for the past week ive been working on the core pillars of the game such as: <br>
+        DEATH (sorta) <br>
+        THINGS TO CAUSE DEATH (to you) <br>
+        MORE ITEMS! <br>
+        (specifically the bubble wand, and ethereal liquid) <br>
+        ITEMS TO CAUSE DEATH TO OTHERS (specifically the cutlass)<br>
+        custom blood colors(when you slash at someone and vise versa) <br>
+        and text that tells you whats happening <br>
+        but in that time ive spent working, theres been a whole lot of troubles, thats the interesting part isn't it? so let me tell you <br>
+        during the development of the bubble wand, i wanted to make it push enemies rather then trapping them in place but i had trouble with that... so yknow what i did... the easier option! (trapping them in place)<br>
+        and also whenever you die, it sorta just says "YOU'RE DEAD, KIDDO" and then closes the window entirely.. im gonna make it real soon, but.. not now... unless i find an excuse to keep it like that <br>
+        then i have added the first enemy: germ , because my friend recommended me adding a germ mafia. (thats why it has a cigar) <br>
+        they wandr a round a little bit and while doing so they <br>
+        shoot a ray in every cardinal direction every turn, and then they check if you're in their sight. <br>
+        if you ARE then they enter ANGER mode where they chase you around, still shooting around rays to make sure you dont juke them <br>
+        but when they enter anger mode, they have a variable thats a random number from 10 - 20, every turn it decreases by 1, and if it turns to 0 then they lose interest <br>
+        and leave you alone, which then the variable switches back to its original state. im planning to make them more complicated, but this is fun to play with so ill change it...<br> later..... unless i come up with an excuse to keep it.
+        and last thing i wanna talk about is the liquid vile thing. it just heals you.. im planning to make it do something random.... but ill make it do that... later... unless i come up with an excuse to keep it.
+
+
+        <br><br>
+        <iframe width="1111" height="833" src="https://www.youtube.com/embed/cSwnixrZkB0" title="dungeoneer gaming" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+        tell me what i should add next in <a href="https://doitheshroom.atabook.org/?page=1"> my guestbook </a>!
+    </div>
+
+    <div class="boxed">
+        <h2>9/24/2026 dungeoneerlog 6: like.. everything, basically. </h2>
+        okay so i've been trying to write this for 3 DAYS but i've GIVEN UP EVERYTIME, BUT THIS TIME I'M REALLY GONNA DO IT. <br>
+        so ive posted my FIRST video devlog (its just a video showcasing the game) and by the time you see this the second one should already be out <br>
+        so i dont really have a format for this so im just gonna ramble on about the game <br>
+        so one of the first things i added was a TITLE SCREEN. THATS RIGHT. NOT REALLY ITS, NOT REALLY A TITLE SCREEN BUT IT IS COOL! <br>
+        it says some basic LORE about the game and then throws you into a color select screen, at first it used to just be lame buttons you pressed on your keyboard <br>
+        but recently i updated it to be one of those things where you press the arrow keys and then it chooses and stuff its pretty cool dude <br>
+        also ignore the gun thats not finished yet.. :eyes:.. okay and i also added like.. a few items.. i the items currently in the game is the following:<br>
+        beer: makes you drunk.. and heals you... dont drink beer, kids, you booze you lose. <br>
+        bubblewand: shoots bubble that stuns enemy for a lil <br>
+        liquid thing: heals u <br>
+        cutlass: attacks enemies <br>
+        shovel: digs <br>
+        and spraypaint (LAME ASF): just sprays paint. get better, you loser item. you're only here because you were easy to code. <br>
+        i have also gotten playtesters to playtest my game. the insight i got? nothing, really. they all HATE ME. they all want me to DIE. <br>
+        i have also added a new critter..... an <a href="https://glagglepedia.fandom.com/wiki/Enfosi"> ENFOSI! </a>. how it works is that it <br>
+        disguises itself to look like a giggler but is strange.. i wont say the reasons why because i dont WANT YOU TO KNOW YET. they also are one shot (holy crap oneshot refrence) so they're easy to kill <br>
+        so uhh yeah watch out for strange gigglers.. when they attack you you start to BLEED. <br>
+        speaking of bleeding, i have also added STATUS EFFECTS. the 3 i have added so far is bleeding, sick (makes you vomit), and clumsy (makes you stumble every now and then).<br>
+        beer makes you vomit and clumsy, btw. i have also made it so the dungeon gets progressively bigger with more gigglers in it the more dungeons you go through and also made them have... variety!<br>
+        ...dont you say it you scumbag; anyways, i have added VARIETY to the dungeons, giving them different tilesets for rooms and hallways and made shovels use random tiles to dig for fun i guess <br>
+        i also made some small changes like changing the heart picture, sorry for the cardiophobian folks out there, i'll probably make an option to change it to a fake heart. <br>
+        uhh... yeah thats pretty much it.. watch the video.. its cool. trust me.. oh and i also learned how to make saving systems from this game <br> 
+        thats pretty cool isnt it? yeah it is. okay thanks guys bye.... okay and i also had to make it so the game closes whenever you reset it sorry guys ill probably change it :sob:...<br>
+        unless i find a reason to not. 
+        <br>
+        <br><br>
+        <iframe width="783" height="587" src="https://www.youtube.com/embed/gOKfFteBW1I" title="dungeoneerlog 2!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+        tell me what i should add next in <a href="https://doitheshroom.atabook.org/?page=1"> my guestbook </a>!
+    </div>
+      <style>
+        body {
+          background-image: url("https://doitheshroom.neocities.org/background.png");
+          background-attachment: fixed;
+          font-family: "Comic Sans MS", "Comic Sans", "Comic Sans";
+          text-align: center;
+        }
+        a:hover {
+          font-size: 18px; 
+        }
+        .boxed {
+          border: 2px outset rgb(0, 0, 0);
+          background-image: url("https://doitheshroom.neocities.org/greenround.png");
+          margin-top: 50px;
+          margin-bottom: auto;
+          margin-right: auto;
+          margin-left: auto;
+          width: fit-content;
+          padding: 25px;
+          text-align: center;
+          margin: 48;
+        }
+      </style>
+  </body>
+</html>
